@@ -7,6 +7,7 @@
 //
 
 #import "SIXLSXWriter.h"
+#import "xlsxwriter.h"
 
 @interface SIXLSXFormat () {
     lxw_format* _lxwFormat;

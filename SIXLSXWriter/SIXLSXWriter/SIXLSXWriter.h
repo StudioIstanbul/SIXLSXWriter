@@ -1,13 +1,22 @@
 //
 //  SIXLSXWriter.h
-//  exchangeExport
+//  SIXLSXWriter
 //
 //  Created by Andreas Zöllner on 05/08/16.
 //  Copyright © 2016 Studio Istanbul. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "xlsxwriter.h"
+#import <Cocoa/Cocoa.h>
+
+//! Project version number for SIXLSXWriter.
+FOUNDATION_EXPORT double SIXLSXWriterVersionNumber;
+
+//! Project version string for SIXLSXWriter.
+FOUNDATION_EXPORT const unsigned char SIXLSXWriterVersionString[];
+
+// In this header, you should import all the public headers of your framework using statements like #import <SIXLSXWriter/PublicHeader.h>
+
+//#import "xlsxwriter.h"
 
 typedef NS_ENUM(NSUInteger, SIXLSXChartType) {
     SIXLSXChartArea,
