@@ -9,6 +9,32 @@
 #import "SIXLSXWriter.h"
 #import "xlsxwriter.h"
 
+@interface SIXLSXRowColOptions ()
+
+-(lxw_row_col_options*)_lxwOptions;
+
+@end
+
+@implementation SIXLSXRowColOptions
+
++(SIXLSXRowColOptions*)rowColOptionsWithHidden:(BOOL)hidden collapsed:(BOOL)collapsed andLevel:(BOOL)level {
+    SIXLSXRowColOptions* opts = [SIXLSXRowColOptions new];
+    opts.hidden = hidden;
+    opts.level = level;
+    opts.collapsed = collapsed;
+    return opts;
+}
+
+-(lxw_row_col_options*)_lxwOptions {
+    static lxw_row_col_options opts = {.hidden = 0, .level = 0, .collapsed = 0};
+    if (self.hidden) opts.hidden = 1;
+    if (self.level) opts.level = 1;
+    if (self.collapsed) opts.collapsed = 1;
+    return &opts;
+}
+
+@end
+
 @interface SIXLSXFormat () {
     lxw_format* _lxwFormat;
 }
@@ -72,6 +98,10 @@
     format_set_bg_color(_lxwFormat, col);
 }
 
+-(void)setNumberFormat:(NSString *)numberFormat {
+    format_set_num_format(_lxwFormat, [numberFormat cStringUsingEncoding:NSUTF8StringEncoding]);
+}
+
 @end
 
 @interface SIXLSXChart () {
@@ -131,10 +161,58 @@
     return YES;
 }
 
--(BOOL)setColumnWidth:(int)width forColumn:(int)startColumn toColumn:(int)endColumn andFormat:(SIXLSXFormat *)cellFormat {
-    lxw_error err = worksheet_set_column(_lxwWorksheet, startColumn, endColumn, width, cellFormat._lxwFormat);
+-(BOOL)writeNumber:(NSNumber *)number toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat *)cellFormat {
+    lxw_error err = worksheet_write_number(_lxwWorksheet, row, column, [number doubleValue], [cellFormat _lxwFormat]);
     if (err) return NO;
     return YES;
+}
+
+-(BOOL)writeNumber:(NSNumber *)number toCell:(NSString *)cellIdentifier withFormat:(SIXLSXFormat *)cellFormat {
+    int row = lxw_name_to_row([cellIdentifier cStringUsingEncoding:NSASCIIStringEncoding]);
+    int col = lxw_name_to_col([cellIdentifier cStringUsingEncoding:NSASCIIStringEncoding]);
+    return [self writeNumber:number toRow:row andColumn:col withFormat:cellFormat];
+}
+
+-(BOOL)writeFormula:(NSString *)formula toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat *)cellFormat {
+    lxw_error err = worksheet_write_formula(_lxwWorksheet, row, column, [formula cStringUsingEncoding:NSUTF8StringEncoding], cellFormat._lxwFormat);
+    if (err) return NO;
+    return YES;
+}
+
+-(BOOL)writeFormula:(NSString *)formula toCell:(NSString *)cellIdentifier withFormat:(SIXLSXFormat *)cellFormat {
+    int row = lxw_name_to_row([cellIdentifier cStringUsingEncoding:NSASCIIStringEncoding]);
+    int col = lxw_name_to_col([cellIdentifier cStringUsingEncoding:NSASCIIStringEncoding]);
+    return [self writeFormula:formula toRow:row andColumn:col withFormat:cellFormat];
+}
+
+-(BOOL)writeFormula:(NSString *)formula withResult:(NSNumber *)result toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat *)cellFormat {
+    lxw_error err = worksheet_write_formula_num(_lxwWorksheet, row, column, [formula cStringUsingEncoding:NSUTF8StringEncoding], cellFormat._lxwFormat, [result doubleValue]);
+    if (err) return NO;
+    return YES;
+}
+
+-(BOOL)writeFormula:(NSString *)formula withResult:(NSNumber *)result toCell:(NSString *)cellIdentifier withFormat:(SIXLSXFormat *)cellFormat {
+    int row = lxw_name_to_row([cellIdentifier cStringUsingEncoding:NSASCIIStringEncoding]);
+    int cell = lxw_name_to_col([cellIdentifier cStringUsingEncoding:NSASCIIStringEncoding]);
+    return [self writeFormula:formula withResult:result toRow:row andColumn:cell withFormat:cellFormat];
+}
+
+-(BOOL)setColumnWidth:(int)width forColumn:(int)startColumn toColumn:(int)endColumn andFormat:(SIXLSXFormat *)cellFormat withOptions:(SIXLSXRowColOptions*)options {
+    lxw_error err = 0;
+    if (!options) err = worksheet_set_column(_lxwWorksheet, startColumn, endColumn, width, cellFormat._lxwFormat);
+    else err = worksheet_set_column_opt(_lxwWorksheet, startColumn, endColumn, width, cellFormat._lxwFormat, options._lxwOptions);
+    if (err) return NO;
+    return YES;
+}
+
+-(BOOL)setColumnWidth:(int)width forColumn:(int)startColumn toColumn:(int)endColumn andFormat:(SIXLSXFormat *)cellFormat {
+    return [self setColumnWidth:width forColumn:startColumn toColumn:endColumn andFormat:cellFormat withOptions:nil];
+}
+
+-(BOOL)setColumnWidth:(int)width forColumnRange:(NSString *)columnRange andFormat:(SIXLSXFormat *)cellFormat {
+    int startCol = lxw_name_to_col([columnRange cStringUsingEncoding:NSASCIIStringEncoding]);
+    int endCol = lxw_name_to_col_2([columnRange cStringUsingEncoding:NSASCIIStringEncoding]);
+    return [self setColumnWidth:width forColumn:startCol toColumn:endCol andFormat:cellFormat];
 }
 
 @end
@@ -149,10 +227,8 @@
 
 -(lxw_workbook_options*)_lxwWorkbookOptions {
     NSString* tmpDirStr = [self.tmpdir path];
-    char sz[tmpDirStr.length*4];
-    sprintf(sz, "%s", [tmpDirStr cStringUsingEncoding:NSUTF8StringEncoding]);
     lxw_workbook_options options = {.constant_memory = 0,
-        .tmpdir = sz};
+        .tmpdir = (char*)[tmpDirStr cStringUsingEncoding:NSUTF8StringEncoding]};
     if (self.constantMemory) options.constant_memory = 1;
     return &options;
 }
@@ -250,7 +326,7 @@
                 NSDate* date = [propertiesDictionary valueForKey:key];
                 NSCalendar *calendar = [NSCalendar currentCalendar];
                 NSDateComponents* datecomps = [calendar components:(NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date];
-                lxw_datetime dt = {datecomps.year, datecomps.month, datecomps.day, datecomps.hour, datecomps.minute, (double)datecomps.second};
+                lxw_datetime dt = {(unsigned int)datecomps.year, (unsigned int)datecomps.month, (unsigned int)datecomps.day, (unsigned int)datecomps.hour, (unsigned int)datecomps.minute, (double)datecomps.second};
                 lxw_error err = workbook_set_custom_property_datetime(_lxwWorkbook, [key cStringUsingEncoding:NSUTF8StringEncoding], &dt);
                 if (err) return NO;
             }

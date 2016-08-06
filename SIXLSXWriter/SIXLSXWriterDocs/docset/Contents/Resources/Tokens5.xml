@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SIXLSXWorkbookOptions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SIXLSXWorkbookOptions</TokenIdentifier>
+			<Abstract type="html">SIXLSXWorkbookOptions describes the options used for handling workbook files.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorkbookOptions/setConstantMemory:</TokenIdentifier>
+			<Abstract type="html">*  Reduces the amount of data stored in memory so that large files can be written efficiently.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL constantMemory</Declaration>
+			
+			
+			<Anchor>//api/name/constantMemory</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorkbookOptions/constantMemory</TokenIdentifier>
+			<Abstract type="html">*  Reduces the amount of data stored in memory so that large files can be written efficiently.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL constantMemory</Declaration>
+			
+			
+			<Anchor>//api/name/constantMemory</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SIXLSXWorkbookOptions/constantMemory</TokenIdentifier>
+			<Abstract type="html">*  Reduces the amount of data stored in memory so that large files can be written efficiently.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL constantMemory</Declaration>
+			
+			
+			<Anchor>//api/name/constantMemory</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorkbookOptions/setTmpdir:</TokenIdentifier>
+			<Abstract type="html">NSURL of directory for storing temporary files. libxlsxwriter stores workbook data in temporary files prior to assembling the final XLSX file. The temporary files are created in the system&apos;s temp directory. If the default temporary directory isn&apos;t accessible to your application, or doesn&apos;t contain enough space, you can specify an alternative location using the tempdir option.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>@property (strong) NSURL *tmpdir</Declaration>
+			
+			
+			<Anchor>//api/name/tmpdir</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorkbookOptions/tmpdir</TokenIdentifier>
+			<Abstract type="html">NSURL of directory for storing temporary files. libxlsxwriter stores workbook data in temporary files prior to assembling the final XLSX file. The temporary files are created in the system&apos;s temp directory. If the default temporary directory isn&apos;t accessible to your application, or doesn&apos;t contain enough space, you can specify an alternative location using the tempdir option.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>@property (strong) NSURL *tmpdir</Declaration>
+			
+			
+			<Anchor>//api/name/tmpdir</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SIXLSXWorkbookOptions/tmpdir</TokenIdentifier>
+			<Abstract type="html">NSURL of directory for storing temporary files. libxlsxwriter stores workbook data in temporary files prior to assembling the final XLSX file. The temporary files are created in the system&apos;s temp directory. If the default temporary directory isn&apos;t accessible to your application, or doesn&apos;t contain enough space, you can specify an alternative location using the tempdir option.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>@property (strong) NSURL *tmpdir</Declaration>
+			
+			
+			<Anchor>//api/name/tmpdir</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

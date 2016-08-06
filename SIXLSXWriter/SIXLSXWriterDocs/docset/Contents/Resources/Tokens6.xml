@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SIXLSXWorksheet.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SIXLSXWorksheet</TokenIdentifier>
+			<Abstract type="html">Defines a worksheet contained in the files workbook.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/writeString:toCell:withFormat:</TokenIdentifier>
+			<Abstract type="html">writes a string to a worksheet cell.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)writeString:(NSString *)string toCell:(NSString *)cellIdentifier withFormat:(SIXLSXFormat *)cellFormat</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>string</Name>
+					<Abstract type="html">string to write</Abstract>
+				</Parameter><Parameter>
+					<Name>cellIdentifier</Name>
+					<Abstract type="html">cell identifier in Excel style (ex. @&quot;A1&quot;)</Abstract>
+				</Parameter><Parameter>
+					<Name>cellFormat</Name>
+					<Abstract type="html">format to use, nil for default.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/writeString:toCell:withFormat:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/writeString:toRow:andColumn:withFormat:</TokenIdentifier>
+			<Abstract type="html">writes a string to a worksheet cell.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)writeString:(NSString *)string toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat *)cellFormat</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>string</Name>
+					<Abstract type="html">writes a string to a worksheet cell.</Abstract>
+				</Parameter><Parameter>
+					<Name>row</Name>
+					<Abstract type="html">row of cell</Abstract>
+				</Parameter><Parameter>
+					<Name>column</Name>
+					<Abstract type="html">column of cell</Abstract>
+				</Parameter><Parameter>
+					<Name>cellFormat</Name>
+					<Abstract type="html">format to use, nil for default.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/writeString:toRow:andColumn:withFormat:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/writeNumber:toCell:withFormat:</TokenIdentifier>
+			<Abstract type="html">Writes a number to a cell on your worksheet.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)writeNumber:(NSNumber *)number toCell:(NSString *)cellIdentifier withFormat:(SIXLSXFormat *)cellFormat</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>number</Name>
+					<Abstract type="html">numeric value to write</Abstract>
+				</Parameter><Parameter>
+					<Name>cellIdentifier</Name>
+					<Abstract type="html">cell identifier in Excel style (ex. @&quot;A1&quot;)</Abstract>
+				</Parameter><Parameter>
+					<Name>cellFormat</Name>
+					<Abstract type="html">format to use, nil for default.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/writeNumber:toCell:withFormat:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/writeNumber:toRow:andColumn:withFormat:</TokenIdentifier>
+			<Abstract type="html">Writes a number to a cell on your worksheet.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)writeNumber:(NSNumber *)number toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat *)cellFormat</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>number</Name>
+					<Abstract type="html">numeric value to write</Abstract>
+				</Parameter><Parameter>
+					<Name>row</Name>
+					<Abstract type="html">row index of the cell</Abstract>
+				</Parameter><Parameter>
+					<Name>column</Name>
+					<Abstract type="html">column index of the cell</Abstract>
+				</Parameter><Parameter>
+					<Name>cellFormat</Name>
+					<Abstract type="html">format to apply or nil</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successfull, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/writeNumber:toRow:andColumn:withFormat:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/writeFormula:toCell:withFormat:</TokenIdentifier>
+			<Abstract type="html">Writes a formula to a cell on your worksheet.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)writeFormula:(NSString *)formula toCell:(NSString *)cellIdentifier withFormat:(SIXLSXFormat *)cellFormat</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>formula</Name>
+					<Abstract type="html">formula to use</Abstract>
+				</Parameter><Parameter>
+					<Name>cellIdentifier</Name>
+					<Abstract type="html">cell identifier in Excel style (ex. @&quot;A1&quot;)</Abstract>
+				</Parameter><Parameter>
+					<Name>cellFormat</Name>
+					<Abstract type="html">format to use, nil for default.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/writeFormula:toCell:withFormat:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/writeFormula:toRow:andColumn:withFormat:</TokenIdentifier>
+			<Abstract type="html">Writes a formula to a cell on your worksheet.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/SIXLSXFormat</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (BOOL)writeFormula:(NSString *)formula toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat *)cellFormat</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>formula</Name>
+					<Abstract type="html">formula to use</Abstract>
+				</Parameter><Parameter>
+					<Name>row</Name>
+					<Abstract type="html">index of cell row</Abstract>
+				</Parameter><Parameter>
+					<Name>column</Name>
+					<Abstract type="html">index of cell column</Abstract>
+				</Parameter><Parameter>
+					<Name>cellFormat</Name>
+					<Abstract type="html">format to use, nil for default.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/writeFormula:toRow:andColumn:withFormat:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/writeFormula:withResult:toRow:andColumn:withFormat:</TokenIdentifier>
+			<Abstract type="html">This method writes a formula or Excel function to the cell specified by row and column with a user defined result.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)writeFormula:(NSString *)formula withResult:(NSNumber *)result toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat *)cellFormat</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>formula</Name>
+					<Abstract type="html">formula to use</Abstract>
+				</Parameter><Parameter>
+					<Name>result</Name>
+					<Abstract type="html">calculation result to use</Abstract>
+				</Parameter><Parameter>
+					<Name>row</Name>
+					<Abstract type="html">index of cell row</Abstract>
+				</Parameter><Parameter>
+					<Name>column</Name>
+					<Abstract type="html">index of cell column</Abstract>
+				</Parameter><Parameter>
+					<Name>cellFormat</Name>
+					<Abstract type="html">format to use, nil for default.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/writeFormula:withResult:toRow:andColumn:withFormat:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/writeFormula:withResult:toCell:withFormat:</TokenIdentifier>
+			<Abstract type="html">This method writes a formula or Excel function to the cell specified by row and column with a user defined result.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)writeFormula:(NSString *)formula withResult:(NSNumber *)result toCell:(NSString *)cellIdentifier withFormat:(SIXLSXFormat *)cellFormat</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>formula</Name>
+					<Abstract type="html">formula to use</Abstract>
+				</Parameter><Parameter>
+					<Name>result</Name>
+					<Abstract type="html">calculation result to use</Abstract>
+				</Parameter><Parameter>
+					<Name>cellIdentifier</Name>
+					<Abstract type="html">cell identifier in Excel style (ex. @&quot;A1&quot;)</Abstract>
+				</Parameter><Parameter>
+					<Name>cellFormat</Name>
+					<Abstract type="html">format to use, nil for default.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/writeFormula:withResult:toCell:withFormat:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/setColumnWidth:forColumn:toColumn:andFormat:withOptions:</TokenIdentifier>
+			<Abstract type="html">Sets width and format of a column.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)setColumnWidth:(int)width forColumn:(int)startColumn toColumn:(int)endColumn andFormat:(SIXLSXFormat *)cellFormat withOptions:(SIXLSXRowColOptions *)options</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>width</Name>
+					<Abstract type="html">width of the column in number of characters in the default font (Calibri 11pt)</Abstract>
+				</Parameter><Parameter>
+					<Name>startColumn</Name>
+					<Abstract type="html">index of the first column</Abstract>
+				</Parameter><Parameter>
+					<Name>endColumn</Name>
+					<Abstract type="html">index of the last column</Abstract>
+				</Parameter><Parameter>
+					<Name>cellFormat</Name>
+					<Abstract type="html">ormat to apply or nil</Abstract>
+				</Parameter><Parameter>
+					<Name>options</Name>
+					<Abstract type="html">options to apply</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/setColumnWidth:forColumn:toColumn:andFormat:withOptions:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/setColumnWidth:forColumn:toColumn:andFormat:</TokenIdentifier>
+			<Abstract type="html">Sets width and format of a column.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)setColumnWidth:(int)width forColumn:(int)startColumn toColumn:(int)endColumn andFormat:(SIXLSXFormat *)cellFormat</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>width</Name>
+					<Abstract type="html">width of the column in number of characters in the default font (Calibri 11pt)</Abstract>
+				</Parameter><Parameter>
+					<Name>startColumn</Name>
+					<Abstract type="html">index of the first column</Abstract>
+				</Parameter><Parameter>
+					<Name>endColumn</Name>
+					<Abstract type="html">index of the last column</Abstract>
+				</Parameter><Parameter>
+					<Name>cellFormat</Name>
+					<Abstract type="html">format to apply or nil</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/setColumnWidth:forColumn:toColumn:andFormat:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/setColumnWidth:forColumnRange:andFormat:</TokenIdentifier>
+			<Abstract type="html">Sets width and format of a column.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)setColumnWidth:(int)width forColumnRange:(NSString *)columnRange andFormat:(SIXLSXFormat *)cellFormat</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>width</Name>
+					<Abstract type="html">width of the column in number of characters in the default font (Calibri 11pt)</Abstract>
+				</Parameter><Parameter>
+					<Name>columnRange</Name>
+					<Abstract type="html">range of columns to be affected in Excel style syntax (ex. &quot;A:E&quot;)</Abstract>
+				</Parameter><Parameter>
+					<Name>cellFormat</Name>
+					<Abstract type="html">format to apply or nil</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/setColumnWidth:forColumnRange:andFormat:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

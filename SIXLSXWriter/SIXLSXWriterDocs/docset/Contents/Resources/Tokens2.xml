@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SIXLSXFormat.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SIXLSXFormat</TokenIdentifier>
+			<Abstract type="html">SIXLSXFormat class describes the format of a cell</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXFormat/setFontName:</TokenIdentifier>
+			<Abstract type="html">Sets the font of a format.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (void)setFontName:(NSString *)fontName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>fontName</Name>
+					<Abstract type="html">name of the font to use.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setFontName:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXFormat/setFontSize:</TokenIdentifier>
+			<Abstract type="html">Sets the size of a font for a format.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (void)setFontSize:(int)fontSize</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>fontSize</Name>
+					<Abstract type="html">font size to use</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setFontSize:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXFormat/setBold</TokenIdentifier>
+			<Abstract type="html">Sets the font to bold.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (void)setBold</Declaration>
+			
+			
+			<Anchor>//api/name/setBold</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXFormat/setItalic</TokenIdentifier>
+			<Abstract type="html">Sets the font to italic.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (void)setItalic</Declaration>
+			
+			
+			<Anchor>//api/name/setItalic</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXFormat/setUnderlined</TokenIdentifier>
+			<Abstract type="html">Sets the text to underlined.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (void)setUnderlined</Declaration>
+			
+			
+			<Anchor>//api/name/setUnderlined</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXFormat/setStrikeout</TokenIdentifier>
+			<Abstract type="html">Sets the text to strikeout.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (void)setStrikeout</Declaration>
+			
+			
+			<Anchor>//api/name/setStrikeout</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXFormat/setFontColor:</TokenIdentifier>
+			<Abstract type="html">Sets the color of the text.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (void)setFontColor:(NSColor *)color</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>color</Name>
+					<Abstract type="html">color to use for text</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setFontColor:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXFormat/setBackgroundColor:</TokenIdentifier>
+			<Abstract type="html">Sets the background color of the cell.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (void)setBackgroundColor:(NSColor *)color</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>color</Name>
+					<Abstract type="html">color to use for background.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setBackgroundColor:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXFormat/setNumberFormat:</TokenIdentifier>
+			<Abstract type="html">Sets the format for number cell contents.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (void)setNumberFormat:(NSString *)numberFormat</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>numberFormat</Name>
+					<Abstract type="html">string representing number format to use.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setNumberFormat:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

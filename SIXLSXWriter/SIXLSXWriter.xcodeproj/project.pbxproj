@@ -136,6 +136,7 @@
 				A942315C1D54EE26002FF534 /* Frameworks */,
 				A942315D1D54EE26002FF534 /* Headers */,
 				A942315E1D54EE26002FF534 /* Resources */,
+				A955CA231D55ED480028FAE4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -215,6 +216,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A955CA231D55ED480028FAE4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#if [ ${CONFIGURATION} == \"Release\" ]; then\nAPPLEDOC_PATH=`which appledoc`\nif [ $APPLEDOC_PATH ]; then\n$APPLEDOC_PATH \\\n--project-name ${PRODUCT_NAME} \\\n--project-company \"Studio Istanbul Medya Hiz. Tic. Ltd. Sti.\" \\\n--company-id \"net.studio-istanbul\" \\\n--output ${PRODUCT_NAME}Docs \\\n--no-keep-undocumented-objects \\\n--no-keep-undocumented-members \\\n--keep-intermediate-files \\\n--repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n--logformat xcode \\\n--index-desc ${PROJECT_DIR}/../README.md \\\n${PROJECT_DIR}/${PRODUCT_NAME}\nfi;\n#fi;";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A942315B1D54EE26002FF534 /* Sources */ = {
@@ -334,7 +352,7 @@
 		A94231751D54EE26002FF534 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -358,7 +376,7 @@
 		A94231761D54EE26002FF534 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -420,6 +438,7 @@
 				A94231761D54EE26002FF534 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A94231771D54EE26002FF534 /* Build configuration list for PBXNativeTarget "SIXLSXWriterTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +447,7 @@
 				A94231791D54EE26002FF534 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

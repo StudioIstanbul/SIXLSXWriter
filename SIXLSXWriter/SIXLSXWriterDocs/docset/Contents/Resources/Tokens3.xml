@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SIXLSXRowColOptions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SIXLSXRowColOptions</TokenIdentifier>
+			<Abstract type="html">Defines options for a row or column. Only hidden property is supported at the moment.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXRowColOptions/setHidden:</TokenIdentifier>
+			<Abstract type="html">The &quot;hidden&quot; option is used to hide a column. This can be used, for example, to hide intermediary steps in a complicated calculation.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL hidden</Declaration>
+			
+			
+			<Anchor>//api/name/hidden</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXRowColOptions/hidden</TokenIdentifier>
+			<Abstract type="html">The &quot;hidden&quot; option is used to hide a column. This can be used, for example, to hide intermediary steps in a complicated calculation.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL hidden</Declaration>
+			
+			
+			<Anchor>//api/name/hidden</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SIXLSXRowColOptions/hidden</TokenIdentifier>
+			<Abstract type="html">The &quot;hidden&quot; option is used to hide a column. This can be used, for example, to hide intermediary steps in a complicated calculation.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL hidden</Declaration>
+			
+			
+			<Anchor>//api/name/hidden</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXRowColOptions/setCollapsed:</TokenIdentifier>
+			<Abstract type="html">This property is not supported yet.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL collapsed</Declaration>
+			
+			
+			<Anchor>//api/name/collapsed</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXRowColOptions/collapsed</TokenIdentifier>
+			<Abstract type="html">This property is not supported yet.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL collapsed</Declaration>
+			
+			
+			<Anchor>//api/name/collapsed</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SIXLSXRowColOptions/collapsed</TokenIdentifier>
+			<Abstract type="html">This property is not supported yet.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL collapsed</Declaration>
+			
+			
+			<Anchor>//api/name/collapsed</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXRowColOptions/setLevel:</TokenIdentifier>
+			<Abstract type="html">This property is not supported yet.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL level</Declaration>
+			
+			
+			<Anchor>//api/name/level</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXRowColOptions/level</TokenIdentifier>
+			<Abstract type="html">This property is not supported yet.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL level</Declaration>
+			
+			
+			<Anchor>//api/name/level</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SIXLSXRowColOptions/level</TokenIdentifier>
+			<Abstract type="html">This property is not supported yet.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>@property (assign) BOOL level</Declaration>
+			
+			
+			<Anchor>//api/name/level</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SIXLSXRowColOptions/rowColOptionsWithHidden:collapsed:andLevel:</TokenIdentifier>
+			<Abstract type="html">Returns an initialized options object. The &quot;hidden&quot; option is used to hide a column. This can be used, for example, to hide intermediary steps in a complicated calculation.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>+ (SIXLSXRowColOptions *)rowColOptionsWithHidden:(BOOL)hidden collapsed:(BOOL)collapsed andLevel:(BOOL)level</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>hidden</Name>
+					<Abstract type="html">The &quot;hidden&quot; option is used to hide a column. This can be used, for example, to hide intermediary steps in a complicated calculation.</Abstract>
+				</Parameter><Parameter>
+					<Name>collapsed</Name>
+					<Abstract type="html">This property is not supported yet.</Abstract>
+				</Parameter><Parameter>
+					<Name>level</Name>
+					<Abstract type="html">This property is not supported yet.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">an initialized options object</Abstract></ReturnValue>
+			<Anchor>//api/name/rowColOptionsWithHidden:collapsed:andLevel:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

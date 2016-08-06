@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SIXLSXWorkbook.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SIXLSXWorkbook</TokenIdentifier>
+			<Abstract type="html">SIXLSXWorkbook is the workbook class and therefore the main class for creating a new workbook file.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SIXLSXWorkbook/newWorkbookAtURL:</TokenIdentifier>
+			<Abstract type="html">create a new workbook</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>+ (SIXLSXWorkbook *)newWorkbookAtURL:(NSURL *)fileURL</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>fileURL</Name>
+					<Abstract type="html">the NSURL where to store this workbook, must not be nil and a valid URL</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">the newly created workbook</Abstract></ReturnValue>
+			<Anchor>//api/name/newWorkbookAtURL:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SIXLSXWorkbook/newWorkbookWithOptions:atURL:</TokenIdentifier>
+			<Abstract type="html">creates a new workbook with specific options.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/SIXLSXWorkbookOptions</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>+ (SIXLSXWorkbook *)newWorkbookWithOptions:(SIXLSXWorkbookOptions *)options atURL:(NSURL *)fileURL</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>options</Name>
+					<Abstract type="html">the options to use for this workbook or nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>fileURL</Name>
+					<Abstract type="html">the NSURL where to store this workbook, must not be nil and a valid URL</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">the newly created workbook</Abstract></ReturnValue>
+			<Anchor>//api/name/newWorkbookWithOptions:atURL:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorkbook/initWithURL:</TokenIdentifier>
+			<Abstract type="html">initializes a new workbook</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (SIXLSXWorkbook *)initWithURL:(NSURL *)fileUrl</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>fileUrl</Name>
+					<Abstract type="html">fileURL the NSURL where to store this workbook, must not be nil and a valid URL</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">the initialized workbook</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithURL:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorkbook/initWithURL:andOptions:</TokenIdentifier>
+			<Abstract type="html">initializes a new workbook with specific options.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (SIXLSXWorkbook *)initWithURL:(NSURL *)fileUrl andOptions:(SIXLSXWorkbookOptions *)options</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>fileUrl</Name>
+					<Abstract type="html">the NSURL where to store this workbook, must not be nil and a valid URL</Abstract>
+				</Parameter><Parameter>
+					<Name>options</Name>
+					<Abstract type="html">the options to use for this workbook or nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">the initialized workbook</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithURL:andOptions:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorkbook/addWorksheetWithTitle:</TokenIdentifier>
+			<Abstract type="html">adds a new worksheet to this workbook. The worksheet name must be a valid Excel worksheet name, i.e. it must be less than 32 character and it cannot contain any of the characters:</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (SIXLSXWorksheet *)addWorksheetWithTitle:(NSString *)worksheetTitle</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>worksheetTitle</Name>
+					<Abstract type="html">the title for the new worksheet or nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">the newly added and initialized worksheet.</Abstract></ReturnValue>
+			<Anchor>//api/name/addWorksheetWithTitle:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorkbook/addFormat</TokenIdentifier>
+			<Abstract type="html">creates a new format to be used for formatting cells.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (SIXLSXFormat *)addFormat</Declaration>
+			
+			<ReturnValue><Abstract type="html">the newly added format.</Abstract></ReturnValue>
+			<Anchor>//api/name/addFormat</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorkbook/addChartOfType:</TokenIdentifier>
+			<Abstract type="html">adds a new chart of the desired type to the existing workbook.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (SIXLSXChart *)addChartOfType:(SIXLSXChartType)chartType</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>chartType</Name>
+					<Abstract type="html">type of chart</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">the newly added chart</Abstract></ReturnValue>
+			<Anchor>//api/name/addChartOfType:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorkbook/closeOrError:</TokenIdentifier>
+			<Abstract type="html">Closes the current workbook.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)closeOrError:(NSError **)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>error</Name>
+					<Abstract type="html">error if operation failes</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successfull, NO if error occured.</Abstract></ReturnValue>
+			<Anchor>//api/name/closeOrError:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorkbook/setDocumentPropertiesFromDictionary:</TokenIdentifier>
+			<Abstract type="html">sets document properties from a NSDictionary.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)setDocumentPropertiesFromDictionary:(NSDictionary *)propertiesDictionary</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>propertiesDictionary</Name>
+					<Abstract type="html">the dictionary of properties to use</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successfull, NO if error occured.</Abstract></ReturnValue>
+			<Anchor>//api/name/setDocumentPropertiesFromDictionary:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorkbook/worksheets</TokenIdentifier>
+			<Abstract type="html">all worksheets in this workbook</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (NSArray *)worksheets</Declaration>
+			
+			<ReturnValue><Abstract type="html">array of all worksheets</Abstract></ReturnValue>
+			<Anchor>//api/name/worksheets</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>
