@@ -173,6 +173,21 @@
     return [self writeNumber:number toRow:row andColumn:col withFormat:cellFormat];
 }
 
+-(BOOL)writeDate:(NSDate *)date toCell:(NSString *)cellIdentifier withFormat:(SIXLSXFormat *)cellFormat {
+    int row = lxw_name_to_row([cellIdentifier cStringUsingEncoding:NSASCIIStringEncoding]);
+    int col = lxw_name_to_col([cellIdentifier cStringUsingEncoding:NSASCIIStringEncoding]);
+    return [self writeDate:date toRow:row andColumn:col withFormat:cellFormat];
+}
+
+-(BOOL)writeDate:(NSDate *)date toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat *)cellFormat {
+    NSCalendar* cal = [NSCalendar currentCalendar];
+    NSDateComponents* comps = [cal components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:date];
+    lxw_datetime dateTime = {.year = (int)[comps year], .month = (int)[comps month], .day = (int)[comps day], .hour = (int)[comps hour], .min = (int)[comps minute], .sec = (double)[comps second]};
+    lxw_error err = worksheet_write_datetime(_lxwWorksheet, row, column, &dateTime, cellFormat._lxwFormat);
+    if (err) return NO;
+    return YES;
+}
+
 -(BOOL)writeFormula:(NSString *)formula toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat *)cellFormat {
     lxw_error err = worksheet_write_formula(_lxwWorksheet, row, column, [formula cStringUsingEncoding:NSUTF8StringEncoding], cellFormat._lxwFormat);
     if (err) return NO;

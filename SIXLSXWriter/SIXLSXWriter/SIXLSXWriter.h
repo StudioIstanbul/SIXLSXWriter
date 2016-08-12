@@ -315,6 +315,33 @@ typedef NS_ENUM(NSUInteger, SIXLSXChartType) {
 -(BOOL)writeNumber:(NSNumber *)number toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat *)cellFormat;
 
 /**
+ *  Writes a date to a cell on your worksheet.
+ *
+ *  The format parameter should be used to apply formatting to the cell using a Format object as shown above. Without a date format the datetime will appear as a number only.
+ *
+ *  @param date             date value to write
+ *  @param cellIdentifier   cell identifier in Excel style (ex. @"A1")
+ *  @param cellFormat       format to use, nil for default.
+ *
+ *  @return YES if successful, NO if not.
+ */
+-(BOOL)writeDate:(NSDate *)date toCell:(NSString *)cellIdentifier withFormat:(SIXLSXFormat *)cellFormat;
+
+/**
+ *  Writes a date to a cell on your worksheet.
+ *
+ *  The format parameter should be used to apply formatting to the cell using a Format object as shown above. Without a date format the datetime will appear as a number only.
+ *
+ *  @param date             date value to write
+ *  @param row              index of cell row
+ *  @param column           index of column
+ *  @param cellFormat       format to use, nil for default.
+ *
+ *  @return YES if successful, NO if not.
+ */
+-(BOOL)writeDate:(NSDate *)date toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat *)cellFormat;
+
+/**
  *  Writes a formula to a cell on your worksheet.
  *
  *    @"=B3 + 6"
