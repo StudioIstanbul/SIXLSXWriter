@@ -325,7 +325,7 @@
             } else if ([[propertiesDictionary valueForKey:key] isKindOfClass:[NSDate class]]) {
                 NSDate* date = [propertiesDictionary valueForKey:key];
                 NSCalendar *calendar = [NSCalendar currentCalendar];
-                NSDateComponents* datecomps = [calendar components:(NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date];
+                NSDateComponents* datecomps = [calendar components:(NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:date];
                 lxw_datetime dt = {(unsigned int)datecomps.year, (unsigned int)datecomps.month, (unsigned int)datecomps.day, (unsigned int)datecomps.hour, (unsigned int)datecomps.minute, (double)datecomps.second};
                 lxw_error err = workbook_set_custom_property_datetime(_lxwWorkbook, [key cStringUsingEncoding:NSUTF8StringEncoding], &dt);
                 if (err) return NO;
