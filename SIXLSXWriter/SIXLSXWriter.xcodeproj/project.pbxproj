@@ -12,10 +12,11 @@
 		A94231701D54EE26002FF534 /* SIXLSXWriterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A942316F1D54EE26002FF534 /* SIXLSXWriterTests.m */; };
 		A94231841D54EE50002FF534 /* SIXLSXWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A94231831D54EE50002FF534 /* SIXLSXWriter.m */; };
 		A942318D1D54EEBE002FF534 /* xlsxwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = A942318C1D54EEBE002FF534 /* xlsxwriter.h */; };
-		A942318F1D54EED5002FF534 /* libxlsxwriter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A942318E1D54EED5002FF534 /* libxlsxwriter.a */; };
 		A94231901D54EF04002FF534 /* xlsxwriter in Headers */ = {isa = PBXBuildFile; fileRef = A942318A1D54EEAE002FF534 /* xlsxwriter */; };
 		A94231961D54EF7A002FF534 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A94231951D54EF7A002FF534 /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A96D862F1D5DC46700962394 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A96D862E1D5DC46700962394 /* libz.dylib */; };
+		A96D863F1D5DCD3600962394 /* libxlsxwriter.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A96D863E1D5DCD3600962394 /* libxlsxwriter.dylib */; };
+		A96D86411D5DCD4E00962394 /* libxlsxwriter.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = A96D863E1D5DCD3600962394 /* libxlsxwriter.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +27,27 @@
 			remoteGlobalIDString = A942315F1D54EE26002FF534;
 			remoteInfo = SIXLSXWriter;
 		};
+		A96D86361D5DC9C300962394 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A94231571D54EE26002FF534 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A96D86301D5DC76100962394;
+			remoteInfo = libxlsxwriter;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A96D863A1D5DCAD300962394 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				A96D86411D5DCD4E00962394 /* libxlsxwriter.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A94231601D54EE26002FF534 /* SIXLSXWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SIXLSXWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,11 +57,11 @@
 		A942316F1D54EE26002FF534 /* SIXLSXWriterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SIXLSXWriterTests.m; sourceTree = "<group>"; };
 		A94231711D54EE26002FF534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A94231831D54EE50002FF534 /* SIXLSXWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIXLSXWriter.m; sourceTree = "<group>"; };
-		A942318A1D54EEAE002FF534 /* xlsxwriter */ = {isa = PBXFileReference; lastKnownFileType = folder; name = xlsxwriter; path = SIXLSXWriter/SIXLSXWriter/xlsxwriter; sourceTree = "<group>"; };
-		A942318C1D54EEBE002FF534 /* xlsxwriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xlsxwriter.h; path = SIXLSXWriter/SIXLSXWriter/xlsxwriter.h; sourceTree = "<group>"; };
-		A942318E1D54EED5002FF534 /* libxlsxwriter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxlsxwriter.a; sourceTree = "<group>"; };
+		A942318A1D54EEAE002FF534 /* xlsxwriter */ = {isa = PBXFileReference; lastKnownFileType = folder; name = xlsxwriter; path = SIXLSXWriter/libxlsxwriter/include/xlsxwriter; sourceTree = "<group>"; };
+		A942318C1D54EEBE002FF534 /* xlsxwriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xlsxwriter.h; path = SIXLSXWriter/libxlsxwriter/include/xlsxwriter.h; sourceTree = "<group>"; };
 		A94231951D54EF7A002FF534 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A96D862E1D5DC46700962394 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A96D863E1D5DCD3600962394 /* libxlsxwriter.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxlsxwriter.dylib; path = ../libxlsxwriter/lib/libxlsxwriter.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +71,7 @@
 			files = (
 				A96D862F1D5DC46700962394 /* libz.dylib in Frameworks */,
 				A94231961D54EF7A002FF534 /* libz.tbd in Frameworks */,
-				A942318F1D54EED5002FF534 /* libxlsxwriter.a in Frameworks */,
+				A96D863F1D5DCD3600962394 /* libxlsxwriter.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,8 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				A96D862E1D5DC46700962394 /* libz.dylib */,
+				A96D863E1D5DCD3600962394 /* libxlsxwriter.dylib */,
 				A94231951D54EF7A002FF534 /* libz.tbd */,
-				A942318E1D54EED5002FF534 /* libxlsxwriter.a */,
 				A94231871D54EE84002FF534 /* xlswriter */,
 				A94231621D54EE26002FF534 /* SIXLSXWriter */,
 				A942316E1D54EE26002FF534 /* SIXLSXWriterTests */,
@@ -131,6 +152,23 @@
 		};
 /* End PBXHeadersBuildPhase section */
 
+/* Begin PBXLegacyTarget section */
+		A96D86301D5DC76100962394 /* libxlsxwriter */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "";
+			buildConfigurationList = A96D86311D5DC76100962394 /* Build configuration list for PBXLegacyTarget "libxlsxwriter" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "${SRCROOT}/../libxlsxwriter";
+			dependencies = (
+			);
+			name = libxlsxwriter;
+			passBuildSettingsInEnvironment = 0;
+			productName = libxlsxwriter;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		A942315F1D54EE26002FF534 /* SIXLSXWriter */ = {
 			isa = PBXNativeTarget;
@@ -141,10 +179,12 @@
 				A942315D1D54EE26002FF534 /* Headers */,
 				A942315E1D54EE26002FF534 /* Resources */,
 				A955CA231D55ED480028FAE4 /* ShellScript */,
+				A96D863A1D5DCAD300962394 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A96D86371D5DC9C300962394 /* PBXTargetDependency */,
 			);
 			name = SIXLSXWriter;
 			productName = SIXLSXWriter;
@@ -200,6 +240,7 @@
 			targets = (
 				A942315F1D54EE26002FF534 /* SIXLSXWriter */,
 				A94231691D54EE26002FF534 /* SIXLSXWriterTests */,
+				A96D86301D5DC76100962394 /* libxlsxwriter */,
 			);
 		};
 /* End PBXProject section */
@@ -263,6 +304,11 @@
 			target = A942315F1D54EE26002FF534 /* SIXLSXWriter */;
 			targetProxy = A942316C1D54EE26002FF534 /* PBXContainerItemProxy */;
 		};
+		A96D86371D5DC9C300962394 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A96D86301D5DC76100962394 /* libxlsxwriter */;
+			targetProxy = A96D86361D5DC9C300962394 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -304,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -345,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -371,6 +417,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/../libxlsxwriter/lib\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.studio-istanbul.SIXLSXWriter";
@@ -397,6 +444,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/../libxlsxwriter/lib\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.studio-istanbul.SIXLSXWriter";
@@ -424,6 +472,18 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.studio-istanbul.SIXLSXWriterTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A96D86321D5DC76100962394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		A96D86331D5DC76100962394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 			};
 			name = Release;
 		};
@@ -456,6 +516,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A96D86311D5DC76100962394 /* Build configuration list for PBXLegacyTarget "libxlsxwriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A96D86321D5DC76100962394 /* Debug */,
+				A96D86331D5DC76100962394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
