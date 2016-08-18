@@ -164,7 +164,7 @@
 			dependencies = (
 			);
 			name = libxlsxwriter;
-			passBuildSettingsInEnvironment = 0;
+			passBuildSettingsInEnvironment = 1;
 			productName = libxlsxwriter;
 		};
 /* End PBXLegacyTarget section */
@@ -478,12 +478,14 @@
 		A96D86321D5DC76100962394 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 			};
 			name = Debug;
 		};
 		A96D86331D5DC76100962394 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 			};
 			name = Release;
 		};
@@ -524,6 +526,7 @@
 				A96D86331D5DC76100962394 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

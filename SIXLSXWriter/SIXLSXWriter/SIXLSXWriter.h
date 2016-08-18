@@ -19,92 +19,6 @@ FOUNDATION_EXPORT const unsigned char SIXLSXWriterVersionString[];
 //#import "xlsxwriter.h"
 
 /**
- *  Supported type of charts.
- */
-typedef NS_ENUM(NSUInteger, SIXLSXChartType) {
-    /**
-     *  Area chart.
-     */
-    SIXLSXChartArea,
-    /**
-     *  Area chart - stacked.
-     */
-    SIXLSXChartAreaStacked,
-    /**
-     *  Area chart - percentage stacked.
-     */
-    SIXLSXChartAreaStackedPercent,
-    /**
-     *  Bar chart.
-     */
-    SIXLSXChartBar,
-    /**
-     *  Bar chart - stacked.
-     */
-    SIXLSXChartBarStacked,
-    /**
-     *  Bar chart - percentage stacked.
-     */
-    SIXLSXChartBarStackedPercent,
-    /**
-     *  Column chart.
-     */
-    SIXLSXChartColumn,
-    /**
-     *  Column chart - stacked.
-     */
-    SIXLSXChartColumnStacked,
-    /**
-     * Column chart - percentage stacked.
-     */
-    SIXLSXChartColumnStackedPercent,
-    /**
-     *  Doughnut chart.
-     */
-    SIXLSXChartDoughnut,
-    /**
-     *  Line chart.
-     */
-    SIXLSXChartLine,
-    /**
-     *  Pie chart.
-     */
-    SIXLSXChartPie,
-    /**
-     *  Scatter chart.
-     */
-    SIXLSXChartScatter,
-    /**
-     *  Scatter chart - straight.
-     */
-    SIXLSXChartScatterStraight,
-    /**
-     *  Scatter chart - straight with markers.
-     */
-    SIXLSXChartScatterStraightWithMarkers,
-    /**
-     *  Scatter chart - smooth.
-     */
-    SIXLSXChartScatterSmooth,
-    /**
-     *  Scatter chart - smooth with markers.
-     */
-    SIXLSXChartScatterSmoothWithMarkers,
-    /**
-     *  Radar chart.
-     */
-    SIXLSXChartRadar,
-    /**
-     *  Radar chart - with markers.
-     */
-    SIXLSXChartRadarWithMarkers,
-    /**
-     *  Radar chart - filled.
-     */
-    SIXLSXChartRadarFilled
-};
-
-/**
  *  Defines options for a row or column. Only hidden property is supported at the moment.
  */
 @interface SIXLSXRowColOptions : NSObject
@@ -191,35 +105,34 @@ typedef NS_ENUM(NSUInteger, SIXLSXChartType) {
  */
 -(void)setBackgroundColor:(NSColor*)color;
 
-/**
- *  Sets the format for number cell contents.
- *
- *  This method is used to define the numerical format of a number in Excel. It controls whether a number is displayed as an integer, a floating point number, a date, a currency value or some other user defined format.
- *
- *  The numerical format of a cell can be specified by using a format string:
- *
- *  Format strings can control any aspect of number formatting allowed by Excel:
- *
- *  Examples for valid number formats:
- *
- *      @"0.000
- *      @"#,##0"
- *      @"#,##0.00
- *      @"0.00"
- *      @"mm/dd/yy"
- *      @"mmm d yyyy
- *      @"d mmmm yyyy"
- *      @"dd/mm/yyyy hh:mm AM/PM"
- *      @"0 \"dollar and\" .00 \"cents\""
- *      @"[Green]General;[Red]-General;General"
- *      @"00000"
- *
- *  The number system used for dates is described in Working with Dates and Times.
- *
- *  For more information on number formats in Excel refer to the Microsoft documentation on cell formats.
- *
- *  @param numberFormat string representing number format to use.
- */
+/** Sets the format for number cell contents.
+
+This method is used to define the numerical format of a number in Excel. It controls whether a number is displayed as an integer, a floating point number, a date, a currency value or some other user defined format.
+ 
+The numerical format of a cell can be specified by using a format string:
+
+Format strings can control any aspect of number formatting allowed by Excel:
+
+Examples for valid number formats:
+
+        @"0.000
+        @"#,##0"
+        @"#,##0.00
+        @"0.00"
+        @"mm/dd/yy"
+        @"mmm d yyyy
+        @"d mmmm yyyy"
+        @"dd/mm/yyyy hh:mm AM/PM"
+        @"0 \"dollar and\" .00 \"cents\""
+        @"[Green]General;[Red]-General;General"
+        @"00000"
+
+The number system used for dates is described in Working with Dates and Times.
+ 
+For more information on number formats in Excel refer to the Microsoft documentation on cell formats.
+
+@param numberFormat string representing number format to use.
+*/
 -(void)setNumberFormat:(NSString*)numberFormat;
 
 @end
@@ -229,6 +142,93 @@ typedef NS_ENUM(NSUInteger, SIXLSXChartType) {
  */
 
 @interface SIXLSXChart : NSObject
+
+/**
+ *  Supported type of charts.
+ */
+typedef NS_ENUM(NSUInteger, SIXLSXChartType) {
+    /**
+     *  Area chart.
+     */
+    SIXLSXChartArea,
+    /**
+     *  Area chart - stacked.
+     */
+    SIXLSXChartAreaStacked,
+    /**
+     *  Area chart - percentage stacked.
+     */
+    SIXLSXChartAreaStackedPercent,
+    /**
+     *  Bar chart.
+     */
+    SIXLSXChartBar,
+    /**
+     *  Bar chart - stacked.
+     */
+    SIXLSXChartBarStacked,
+    /**
+     *  Bar chart - percentage stacked.
+     */
+    SIXLSXChartBarStackedPercent,
+    /**
+     *  Column chart.
+     */
+    SIXLSXChartColumn,
+    /**
+     *  Column chart - stacked.
+     */
+    SIXLSXChartColumnStacked,
+    /**
+     * Column chart - percentage stacked.
+     */
+    SIXLSXChartColumnStackedPercent,
+    /**
+     *  Doughnut chart.
+     */
+    SIXLSXChartDoughnut,
+    /**
+     *  Line chart.
+     */
+    SIXLSXChartLine,
+    /**
+     *  Pie chart.
+     */
+    SIXLSXChartPie,
+    /**
+     *  Scatter chart.
+     */
+    SIXLSXChartScatter,
+    /**
+     *  Scatter chart - straight.
+     */
+    SIXLSXChartScatterStraight,
+    /**
+     *  Scatter chart - straight with markers.
+     */
+    SIXLSXChartScatterStraightWithMarkers,
+    /**
+     *  Scatter chart - smooth.
+     */
+    SIXLSXChartScatterSmooth,
+    /**
+     *  Scatter chart - smooth with markers.
+     */
+    SIXLSXChartScatterSmoothWithMarkers,
+    /**
+     *  Radar chart.
+     */
+    SIXLSXChartRadar,
+    /**
+     *  Radar chart - with markers.
+     */
+    SIXLSXChartRadarWithMarkers,
+    /**
+     *  Radar chart - filled.
+     */
+    SIXLSXChartRadarFilled
+};
+
 
 @end
 
@@ -383,7 +383,7 @@ typedef NS_ENUM(NSUInteger, SIXLSXChartType) {
  *  @param cellFormat format to use, nil for default.
  *
  *  @return YES if successful, NO if not.
- *  @see -(BOOL)writeFormula:(NSString *)formula toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat *)cellFormat;
+ *  @see -writeFormula:toRow:andColumn:withFormat:
  */
 
 -(BOOL)writeFormula:(NSString *)formula toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat *)cellFormat;
@@ -408,7 +408,7 @@ typedef NS_ENUM(NSUInteger, SIXLSXChartType) {
  *  @param cellFormat format to use, nil for default.
  *
  *  @return YES if successful, NO if not.
- *  @see -(BOOL)writeFormula:(NSString*)formula toCell:(NSString*)cellIdentifier withFormat:(SIXLSXFormat*)cellFormat;
+ *  @see -writeFormula:toCell:withFormat:
  */
 -(BOOL)writeFormula:(NSString*)formula withResult:(NSNumber*)result toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat*)cellFormat;
 
@@ -431,7 +431,7 @@ typedef NS_ENUM(NSUInteger, SIXLSXChartType) {
  *  @param cellFormat format to use, nil for default.
  *
  *  @return YES if successful, NO if not.
- *  @see -(BOOL)writeFormula:(NSString*)formula toCell:(NSString*)cellIdentifier withFormat:(SIXLSXFormat*)cellFormat;
+ *  @see -writeFormula:toCell:withFormat:
  */
 -(BOOL)writeFormula:(NSString*)formula withResult:(NSNumber*)result toCell:(NSString*)cellIdentifier withFormat:(SIXLSXFormat*)cellFormat;
 

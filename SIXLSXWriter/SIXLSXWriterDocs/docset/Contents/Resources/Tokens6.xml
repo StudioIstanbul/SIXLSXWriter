@@ -111,6 +111,55 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/writeDate:toCell:withFormat:</TokenIdentifier>
+			<Abstract type="html">Writes a date to a cell on your worksheet.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)writeDate:(NSDate *)date toCell:(NSString *)cellIdentifier withFormat:(SIXLSXFormat *)cellFormat</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>date</Name>
+					<Abstract type="html">date value to write</Abstract>
+				</Parameter><Parameter>
+					<Name>cellIdentifier</Name>
+					<Abstract type="html">cell identifier in Excel style (ex. @&quot;A1&quot;)</Abstract>
+				</Parameter><Parameter>
+					<Name>cellFormat</Name>
+					<Abstract type="html">format to use, nil for default.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/writeDate:toCell:withFormat:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/writeDate:toRow:andColumn:withFormat:</TokenIdentifier>
+			<Abstract type="html">Writes a date to a cell on your worksheet.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)writeDate:(NSDate *)date toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat *)cellFormat</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>date</Name>
+					<Abstract type="html">date value to write</Abstract>
+				</Parameter><Parameter>
+					<Name>row</Name>
+					<Abstract type="html">index of cell row</Abstract>
+				</Parameter><Parameter>
+					<Name>column</Name>
+					<Abstract type="html">index of column</Abstract>
+				</Parameter><Parameter>
+					<Name>cellFormat</Name>
+					<Abstract type="html">format to use, nil for default.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/writeDate:toRow:andColumn:withFormat:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/writeFormula:toCell:withFormat:</TokenIdentifier>
 			<Abstract type="html">Writes a formula to a cell on your worksheet.</Abstract>
 			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
@@ -139,7 +188,7 @@
 			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SIXLSXFormat</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/writeFormula:toRow:andColumn:withFormat:</TokenIdentifier>
 		
 	</RelatedTokens>
 	
@@ -169,6 +218,11 @@
 			<Abstract type="html">This method writes a formula or Excel function to the cell specified by row and column with a user defined result.</Abstract>
 			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
 			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/writeFormula:toCell:withFormat:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
 			<Declaration>- (BOOL)writeFormula:(NSString *)formula withResult:(NSNumber *)result toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat *)cellFormat</Declaration>
 			<Parameters>
 				<Parameter>
@@ -198,6 +252,11 @@
 			<Abstract type="html">This method writes a formula or Excel function to the cell specified by row and column with a user defined result.</Abstract>
 			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
 			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/writeFormula:toCell:withFormat:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
 			<Declaration>- (BOOL)writeFormula:(NSString *)formula withResult:(NSNumber *)result toCell:(NSString *)cellIdentifier withFormat:(SIXLSXFormat *)cellFormat</Declaration>
 			<Parameters>
 				<Parameter>
@@ -297,6 +356,7 @@
             <NodeRef refid="6"/>
 		</Token>
 		
+        
         
 	</File>
 </Tokens>
