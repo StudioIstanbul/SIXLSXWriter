@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/SIXLSXChartType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/SIXLSXChartType</TokenIdentifier>
+			<Abstract type="html">Supported type of charts.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartArea</TokenIdentifier>
+            <Abstract type="html">Area chart.
+     </Abstract>
+            <Declaration>SIXLSXChartArea</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartAreaStacked</TokenIdentifier>
+            <Abstract type="html">Area chart - stacked.
+     </Abstract>
+            <Declaration>SIXLSXChartAreaStacked</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartAreaStackedPercent</TokenIdentifier>
+            <Abstract type="html">Area chart - percentage stacked.
+     </Abstract>
+            <Declaration>SIXLSXChartAreaStackedPercent</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartBar</TokenIdentifier>
+            <Abstract type="html">Bar chart.
+     </Abstract>
+            <Declaration>SIXLSXChartBar</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartBarStacked</TokenIdentifier>
+            <Abstract type="html">Bar chart - stacked.
+     </Abstract>
+            <Declaration>SIXLSXChartBarStacked</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartBarStackedPercent</TokenIdentifier>
+            <Abstract type="html">Bar chart - percentage stacked.
+     </Abstract>
+            <Declaration>SIXLSXChartBarStackedPercent</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartColumn</TokenIdentifier>
+            <Abstract type="html">Column chart.
+     </Abstract>
+            <Declaration>SIXLSXChartColumn</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartColumnStacked</TokenIdentifier>
+            <Abstract type="html">Column chart - stacked.
+     </Abstract>
+            <Declaration>SIXLSXChartColumnStacked</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartColumnStackedPercent</TokenIdentifier>
+            <Abstract type="html">Column chart - percentage stacked.
+     </Abstract>
+            <Declaration>SIXLSXChartColumnStackedPercent</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartDoughnut</TokenIdentifier>
+            <Abstract type="html">Doughnut chart.
+     </Abstract>
+            <Declaration>SIXLSXChartDoughnut</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartLine</TokenIdentifier>
+            <Abstract type="html">Line chart.
+     </Abstract>
+            <Declaration>SIXLSXChartLine</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartPie</TokenIdentifier>
+            <Abstract type="html">Pie chart.
+     </Abstract>
+            <Declaration>SIXLSXChartPie</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartScatter</TokenIdentifier>
+            <Abstract type="html">Scatter chart.
+     </Abstract>
+            <Declaration>SIXLSXChartScatter</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartScatterStraight</TokenIdentifier>
+            <Abstract type="html">Scatter chart - straight.
+     </Abstract>
+            <Declaration>SIXLSXChartScatterStraight</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartScatterStraightWithMarkers</TokenIdentifier>
+            <Abstract type="html">Scatter chart - straight with markers.
+     </Abstract>
+            <Declaration>SIXLSXChartScatterStraightWithMarkers</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartScatterSmooth</TokenIdentifier>
+            <Abstract type="html">Scatter chart - smooth.
+     </Abstract>
+            <Declaration>SIXLSXChartScatterSmooth</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartScatterSmoothWithMarkers</TokenIdentifier>
+            <Abstract type="html">Scatter chart - smooth with markers.
+     </Abstract>
+            <Declaration>SIXLSXChartScatterSmoothWithMarkers</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartRadar</TokenIdentifier>
+            <Abstract type="html">Radar chart.
+     </Abstract>
+            <Declaration>SIXLSXChartRadar</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartRadarWithMarkers</TokenIdentifier>
+            <Abstract type="html">Radar chart - with markers.
+     </Abstract>
+            <Declaration>SIXLSXChartRadarWithMarkers</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SIXLSXChartRadarFilled</TokenIdentifier>
+            <Abstract type="html">Radar chart - filled.
+     </Abstract>
+            <Declaration>SIXLSXChartRadarFilled</Declaration>
+            
+            <DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

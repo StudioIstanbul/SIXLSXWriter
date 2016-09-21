@@ -356,6 +356,153 @@
             <NodeRef refid="6"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/setAutoFilterForStartRow:startColumn:endRow:endColumn:</TokenIdentifier>
+			<Abstract type="html">The setAutoFilter function allows an autofilter to be added to a worksheet.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)setAutoFilterForStartRow:(int)startRow startColumn:(int)startColumn endRow:(int)endRow endColumn:(int)endColumn</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>startRow</Name>
+					<Abstract type="html">The first row of the range. (All zero indexed.)</Abstract>
+				</Parameter><Parameter>
+					<Name>startColumn</Name>
+					<Abstract type="html">The first column of the range.</Abstract>
+				</Parameter><Parameter>
+					<Name>endRow</Name>
+					<Abstract type="html">The last row of the range.</Abstract>
+				</Parameter><Parameter>
+					<Name>endColumn</Name>
+					<Abstract type="html">The last col of the range.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/setAutoFilterForStartRow:startColumn:endRow:endColumn:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/setAutoFilterForCellRange:</TokenIdentifier>
+			<Abstract type="html">The setAutoFilter function allows an autofilter to be added to a worksheet.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)setAutoFilterForCellRange:(NSString *)cellRange</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cellRange</Name>
+					<Abstract type="html">The cell range for this autofilter in Excel syntax (ex. @&quot;A1:D51&quot;)</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/setAutoFilterForCellRange:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/repeatRowsFirstRow:lastRow:</TokenIdentifier>
+			<Abstract type="html">For large Excel documents it is often desirable to have the first row or rows of the worksheet print out at the top of each page.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)repeatRowsFirstRow:(int)firstRow lastRow:(int)lastRow</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>firstRow</Name>
+					<Abstract type="html">First row of repeat range.</Abstract>
+				</Parameter><Parameter>
+					<Name>lastRow</Name>
+					<Abstract type="html">Last row of repeat range.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/repeatRowsFirstRow:lastRow:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/repeatColumnsFirstColumn:lastColumn:</TokenIdentifier>
+			<Abstract type="html">For large Excel documents it is often desirable to have the first column or columns of the worksheet print out at the left of each page.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)repeatColumnsFirstColumn:(int)firstCol lastColumn:(int)lastColumn</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>firstCol</Name>
+					<Abstract type="html">First column of repeat range.</Abstract>
+				</Parameter><Parameter>
+					<Name>lastColumn</Name>
+					<Abstract type="html">Last column of repeat range.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/repeatColumnsFirstColumn:lastColumn:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/setPageOrientation:</TokenIdentifier>
+			<Abstract type="html">This function is used to set the orientation of a worksheet&apos;s printed page to landscape or portrait.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+			<Declaration>- (void)setPageOrientation:(NSPaperOrientation)orientation</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>orientation</Name>
+					<Abstract type="html">orientation to set: NSPaperOrientationPortrait (default) or NSPaperOrientationLandscape
+
+@default NSPaperOrientationPortrait</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setPageOrientation:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/setHeader:</TokenIdentifier>
+			<Abstract type="html">Headers and footers are generated using a string which is a combination of plain text and control characters.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/setFooter:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (BOOL)setHeader:(NSString *)headerString</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>headerString</Name>
+					<Abstract type="html">The formar string for the print header.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/setHeader:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/setFooter:</TokenIdentifier>
+			<Abstract type="html">Headers and footers are generated using a string which is a combination of plain text and control characters.</Abstract>
+			<DeclaredIn>SIXLSXWriter.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/SIXLSXWorksheet/setHeader:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (BOOL)setFooter:(NSString *)footerString</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>headerString</Name>
+					<Abstract type="html">The formar string for the print header.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
+			<Anchor>//api/name/setFooter:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+        
         
         
 	</File>
