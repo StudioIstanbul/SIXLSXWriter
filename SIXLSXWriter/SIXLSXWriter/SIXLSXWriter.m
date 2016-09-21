@@ -230,6 +230,57 @@
     return [self setColumnWidth:width forColumn:startCol toColumn:endCol andFormat:cellFormat];
 }
 
+-(BOOL)setAutoFilterForStartRow:(int)startRow startColumn:(int)startColumn endRow:(int)endRow endColumn:(int)endColumn {
+    lxw_error err = 0;
+    err = worksheet_autofilter(_lxwWorksheet, startRow, startColumn, endRow, endColumn);
+    if (err) return NO;
+    return YES;
+}
+
+-(BOOL)setAutoFilterForCellRange:(NSString *)cellRange {
+    int startRow = lxw_name_to_row([cellRange cStringUsingEncoding:NSASCIIStringEncoding]);
+    int startCol = lxw_name_to_col([cellRange cStringUsingEncoding:NSASCIIStringEncoding]);
+    int endRow = lxw_name_to_row_2([cellRange cStringUsingEncoding:NSASCIIStringEncoding]);
+    int endCol = lxw_name_to_col_2([cellRange cStringUsingEncoding:NSASCIIStringEncoding]);
+    return [self setAutoFilterForStartRow:startRow startColumn:startCol endRow:endRow endColumn:endCol];
+}
+
+-(BOOL)repeatRowsFirstRow:(int)firstRow lastRow:(int)lastRow {
+    lxw_error err = 0;
+    err = worksheet_repeat_rows(_lxwWorksheet, firstRow, lastRow);
+    if (err) return NO;
+    return YES;
+}
+
+-(BOOL)repeatColumnsFirstColumn:(int)firstCol lastColumn:(int)lastColumn {
+    lxw_error err = 0;
+    err = worksheet_repeat_rows(_lxwWorksheet, firstCol, lastColumn);
+    if (err) return NO;
+    return YES;
+}
+
+-(void)setPageOrientation:(NSPaperOrientation)orientation {
+    if (orientation == NSPaperOrientationLandscape) {
+        worksheet_set_landscape(_lxwWorksheet);
+    } else {
+        worksheet_set_portrait(_lxwWorksheet);
+    }
+}
+
+-(BOOL)setHeader:(NSString *)headerString {
+    lxw_error err = 0;
+    err = worksheet_set_header(_lxwWorksheet, [headerString cStringUsingEncoding:NSUTF8StringEncoding]);
+    if (err) return NO;
+    return YES;
+}
+
+-(BOOL)setFooter:(NSString *)footerString {
+    lxw_error err = 0;
+    err = worksheet_set_footer(_lxwWorksheet, [footerString cStringUsingEncoding:NSUTF8StringEncoding]);
+    if (err) return NO;
+    return YES;
+}
+
 @end
 
 @interface SIXLSXWorkbookOptions ()
