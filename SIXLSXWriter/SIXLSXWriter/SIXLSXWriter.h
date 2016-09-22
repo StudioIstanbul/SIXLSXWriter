@@ -115,17 +115,17 @@ Format strings can control any aspect of number formatting allowed by Excel:
 
 Examples for valid number formats:
 
-        @"0.000
-        @"#,##0"
-        @"#,##0.00
-        @"0.00"
-        @"mm/dd/yy"
-        @"mmm d yyyy
-        @"d mmmm yyyy"
-        @"dd/mm/yyyy hh:mm AM/PM"
-        @"0 \"dollar and\" .00 \"cents\""
-        @"[Green]General;[Red]-General;General"
-        @"00000"
+`@"0.000
+ @"#,##0"
+ @"#,##0.00
+ @"0.00"
+ @"mm/dd/yy"
+ @"mmm d yyyy
+ @"d mmmm yyyy"
+ @"dd/mm/yyyy hh:mm AM/PM"
+ @"0 \"dollar and\" .00 \"cents\""
+ @"[Green]General;[Red]-General;General"
+ @"00000"`
 
 The number system used for dates is described in Working with Dates and Times.
  
@@ -408,7 +408,7 @@ typedef NS_ENUM(NSUInteger, SIXLSXChartType) {
  *  @param cellFormat format to use, nil for default.
  *
  *  @return YES if successful, NO if not.
- *  @see -writeFormula:toCell:withFormat:
+ *  @see writeFormula:toCell:withFormat:
  */
 -(BOOL)writeFormula:(NSString*)formula withResult:(NSNumber*)result toRow:(int)row andColumn:(int)column withFormat:(SIXLSXFormat*)cellFormat;
 
@@ -431,7 +431,7 @@ typedef NS_ENUM(NSUInteger, SIXLSXChartType) {
  *  @param cellFormat format to use, nil for default.
  *
  *  @return YES if successful, NO if not.
- *  @see -writeFormula:toCell:withFormat:
+ *  @see writeFormula:toCell:withFormat:
  */
 -(BOOL)writeFormula:(NSString*)formula withResult:(NSNumber*)result toCell:(NSString*)cellIdentifier withFormat:(SIXLSXFormat*)cellFormat;
 
@@ -501,75 +501,75 @@ typedef NS_ENUM(NSUInteger, SIXLSXChartType) {
 -(BOOL)setColumnWidth:(int)width forColumnRange:(NSString*)columnRange andFormat:(SIXLSXFormat *)cellFormat;
 
 /**
- The setAutoFilter function allows an autofilter to be added to a worksheet.
- 
- An autofilter is a way of adding drop down lists to the headers of a 2D range of worksheet data. This allows users to filter the data based on simple criteria so that some data is shown and some is hidden.
- 
- Note: it isn't currently possible to apply filter conditions to the autofilter.
- 
- @param startRow    The first row of the range. (All zero indexed.)
- @param startColumn The first column of the range.
- @param endRow      The last row of the range.
- @param endColumn   The last col of the range.
- 
- @return YES if successful, NO if not.
- 
- @since 1.0
- */
+* The setAutoFilter function allows an autofilter to be added to a worksheet.
+*
+* An autofilter is a way of adding drop down lists to the headers of a 2D range of worksheet data. This allows users to filter the data based on simple criteria so that some data is shown and some is hidden.
+*
+* Note: it isn't currently possible to apply filter conditions to the autofilter.
+*
+* @param startRow    The first row of the range. (All zero indexed.)
+* @param startColumn The first column of the range.
+* @param endRow      The last row of the range.
+* @param endColumn   The last col of the range.
+*
+* @return YES if successful, NO if not.
+*
+* @since 1.0
+*/
 
 -(BOOL)setAutoFilterForStartRow:(int)startRow startColumn:(int)startColumn endRow:(int)endRow endColumn:(int)endColumn;
 
 /**
- The setAutoFilter function allows an autofilter to be added to a worksheet.
- 
- An autofilter is a way of adding drop down lists to the headers of a 2D range of worksheet data. This allows users to filter the data based on simple criteria so that some data is shown and some is hidden.
- 
- Note: it isn't currently possible to apply filter conditions to the autofilter.
- 
- @param cellRange The cell range for this autofilter in Excel syntax (ex. @"A1:D51")
- 
- @return YES if successful, NO if not.
- 
- @since 1.0
- */
+* The setAutoFilter function allows an autofilter to be added to a worksheet.
+*
+* An autofilter is a way of adding drop down lists to the headers of a 2D range of worksheet data. This allows users to filter the data based on simple criteria so that some data is shown and some is hidden.
+*
+* Note: it isn't currently possible to apply filter conditions to the autofilter.
+*
+* @param cellRange The cell range for this autofilter in Excel syntax (ex. @"A1:D51")
+*
+* @return YES if successful, NO if not.
+*
+* @since 1.0
+*/
 
 -(BOOL)setAutoFilterForCellRange:(NSString*)cellRange;
 
 /**
- For large Excel documents it is often desirable to have the first row or rows of the worksheet print out at the top of each page.
- 
- @param firstRow First row of repeat range.
- @param lastRow  Last row of repeat range.
- 
- @return YES if successful, NO if not.
- 
- @since 1.0
- */
+* For large Excel documents it is often desirable to have the first row or rows of the worksheet print out at the top of each page.
+*
+* @param firstRow First row of repeat range.
+* @param lastRow  Last row of repeat range.
+*
+* @return YES if successful, NO if not.
+*
+* @since 1.0
+*/
 
 -(BOOL)repeatRowsFirstRow:(int)firstRow lastRow:(int)lastRow;
 
 /**
- For large Excel documents it is often desirable to have the first column or columns of the worksheet print out at the left of each page.
- 
- @param firstCol   First column of repeat range.
- @param lastColumn Last column of repeat range.
- 
- @return YES if successful, NO if not.
- 
- @since 1.0
- */
+* For large Excel documents it is often desirable to have the first column or columns of the worksheet print out at the left of each page.
+*
+* @param firstCol   First column of repeat range.
+* @param lastColumn Last column of repeat range.
+*
+* @return YES if successful, NO if not.
+*
+* @since 1.0
+*/
 
 -(BOOL)repeatColumnsFirstColumn:(int)firstCol lastColumn:(int)lastColumn;
 
 /**
- This function is used to set the orientation of a worksheet's printed page to landscape or portrait.
- 
- @param orientation orientation to set: NSPaperOrientationPortrait (default) or NSPaperOrientationLandscape
- 
- @default NSPaperOrientationPortrait
- 
- @since 1.0
- */
+* This function is used to set the orientation of a worksheet's printed page to landscape or portrait.
+*
+* @param orientation orientation to set: NSPaperOrientationPortrait (default) or NSPaperOrientationLandscape
+*
+* @default NSPaperOrientationPortrait
+*
+* @since 1.0
+*/
 
 -(void)setPageOrientation:(NSPaperOrientation)orientation;
 
@@ -601,71 +601,71 @@ typedef NS_ENUM(NSUInteger, SIXLSXChartType) {
  Text in headers and footers can be justified (aligned) to the left, center and right by prefixing the text with the control characters &L, &C and &R.
  
  For example (with ASCII art representation of the results):
- @"&LHello"
  
-     ---------------------------------------------------------------
-     |                                                               |
-     | Hello                                                         |
-     |                                                               |
+ `@"&LHello"
+ ---------------------------------------------------------------
+ |                                                               |
+ | Hello                                                         |
+ |                                                               |`
  
- @"&CHello"
-     ---------------------------------------------------------------
-     |                                                               |
-     |                          Hello                                |
-     |                                                               |
+ `@"&CHello"
+ ---------------------------------------------------------------
+ |                                                               |
+ |                          Hello                                |
+ |                                                               |`
  
- @"&RHello"
-     ---------------------------------------------------------------
-     |                                                               |
-     |                                                         Hello |
-     |                                                               |
+ `@"&RHello"
+ ---------------------------------------------------------------
+ |                                                               |
+ |                                                         Hello |
+ |                                                               |`
  
  For simple text, if you do not specify any justification the text will be centered. However, you must prefix the text with &C if you specify a font name or any other formatting:
  
-@"Hello"
-     ---------------------------------------------------------------
-     |                                                               |
-     |                          Hello                                |
-     |                                                               |
+ `@"Hello"
+ ---------------------------------------------------------------
+ |                                                               |
+ |                          Hello                                |
+ |                                                               |`
  
  You can have text in each of the justification regions:
  
- @"&LCiao&CBello&RCielo"
-     ---------------------------------------------------------------
-     |                                                               |
-     | Ciao                     Bello                          Cielo |
-     |                                                               |
+ `@"&LCiao&CBello&RCielo"
+ ---------------------------------------------------------------
+ |                                                               |
+ | Ciao                     Bello                          Cielo |
+ |                                                               |`
  
  The information control characters act as variables that Excel will update as the workbook or worksheet changes. Times and dates are in the users default format:
  
- @"&CPage &P of &N"
-     ---------------------------------------------------------------
-     |                                                               |
-     |                        Page 1 of 6                            |
-     |                                                               |
+ `@"&CPage &P of &N"
+ ---------------------------------------------------------------
+ |                                                               |
+ |                        Page 1 of 6                            |
+ |                                                               |`
  
- @"&CUpdated at &T"
-     ---------------------------------------------------------------
-     |                                                               |
-     |                    Updated at 12:30 PM                        |
-     |                                                               |
+ `@"&CUpdated at &T"
+ ---------------------------------------------------------------
+ |                                                               |
+ |                    Updated at 12:30 PM                        |
+ |                                                               |`
  
  You can specify the font size of a section of the text by prefixing it with the control character &n where n is the font size:
  
-     @"&C&30Hello Big"
-     @"&C&10Hello Small"
+ `@"&C&30Hello Big"
+ @"&C&10Hello Small"`
  
  You can specify the font of a section of the text by prefixing it with the control sequence &"font,style" where fontname is a font name such as Windows font descriptions: "Regular", "Italic", "Bold" or "Bold Italic": "Courier New" or "Times New Roman" and style is one of the standard
  
-     @"&C&\"Courier New,Italic\"Hello"
-     @"&C&\"Courier New,Bold Italic\"Hello"
-     @"&C&\"Times New Roman,Regular\"Hello"
+ `@"&C&\"Courier New,Italic\"Hello"
+ @"&C&\"Courier New,Bold Italic\"Hello"
+ @"&C&\"Times New Roman,Regular\"Hello"`
  
  It is possible to combine all of these features together to create sophisticated headers and footers. As an aid to setting up complicated headers and footers you can record a page set-up as a macro in Excel and look at the format strings that VBA produces. Remember however that VBA uses two double quotes "" to indicate a single double quote.
  
  To include a single literal ampersand & in a header or footer you should use a double ampersand &&:
  
-     @"&CCuriouser && Curiouser - Attorneys at Law"
+ `@"&CCuriouser && Curiouser - Attorneys at Law"`
  
  Note, the header or footer string must be less than 255 characters. Strings longer than this will not be written.
  
@@ -708,75 +708,75 @@ typedef NS_ENUM(NSUInteger, SIXLSXChartType) {
  Text in headers and footers can be justified (aligned) to the left, center and right by prefixing the text with the control characters &L, &C and &R.
  
  For example (with ASCII art representation of the results):
- @"&LHello"
  
+ `@"&LHello"
  ---------------------------------------------------------------
  |                                                               |
  | Hello                                                         |
- |                                                               |
+ |                                                               |`
  
- @"&CHello"
+ `@"&CHello"
  ---------------------------------------------------------------
  |                                                               |
  |                          Hello                                |
- |                                                               |
+ |                                                               |`
  
- @"&RHello"
+ `@"&RHello"
  ---------------------------------------------------------------
  |                                                               |
  |                                                         Hello |
- |                                                               |
+ |                                                               |`
  
  For simple text, if you do not specify any justification the text will be centered. However, you must prefix the text with &C if you specify a font name or any other formatting:
  
- @"Hello"
+ `@"Hello"
  ---------------------------------------------------------------
  |                                                               |
  |                          Hello                                |
- |                                                               |
+ |                                                               |`
  
  You can have text in each of the justification regions:
  
- @"&LCiao&CBello&RCielo"
+ `@"&LCiao&CBello&RCielo"
  ---------------------------------------------------------------
  |                                                               |
  | Ciao                     Bello                          Cielo |
- |                                                               |
+ |                                                               |`
  
  The information control characters act as variables that Excel will update as the workbook or worksheet changes. Times and dates are in the users default format:
  
- @"&CPage &P of &N"
+ `@"&CPage &P of &N"
  ---------------------------------------------------------------
  |                                                               |
  |                        Page 1 of 6                            |
- |                                                               |
+ |                                                               |`
  
- @"&CUpdated at &T"
+ `@"&CUpdated at &T"
  ---------------------------------------------------------------
  |                                                               |
  |                    Updated at 12:30 PM                        |
- |                                                               |
+ |                                                               |`
  
  You can specify the font size of a section of the text by prefixing it with the control character &n where n is the font size:
  
- @"&C&30Hello Big"
- @"&C&10Hello Small"
+ `@"&C&30Hello Big"
+ @"&C&10Hello Small"`
  
  You can specify the font of a section of the text by prefixing it with the control sequence &"font,style" where fontname is a font name such as Windows font descriptions: "Regular", "Italic", "Bold" or "Bold Italic": "Courier New" or "Times New Roman" and style is one of the standard
  
- @"&C&\"Courier New,Italic\"Hello"
+ `@"&C&\"Courier New,Italic\"Hello"
  @"&C&\"Courier New,Bold Italic\"Hello"
- @"&C&\"Times New Roman,Regular\"Hello"
+ @"&C&\"Times New Roman,Regular\"Hello"`
  
  It is possible to combine all of these features together to create sophisticated headers and footers. As an aid to setting up complicated headers and footers you can record a page set-up as a macro in Excel and look at the format strings that VBA produces. Remember however that VBA uses two double quotes "" to indicate a single double quote.
  
  To include a single literal ampersand & in a header or footer you should use a double ampersand &&:
  
- @"&CCuriouser && Curiouser - Attorneys at Law"
+ `@"&CCuriouser && Curiouser - Attorneys at Law"`
  
  Note, the header or footer string must be less than 255 characters. Strings longer than this will not be written.
  
- @param headerString The formar string for the print header.
+ @param footerString The formar string for the print footer.
  
  @return YES if successful, NO if not.
  
@@ -865,7 +865,8 @@ typedef NS_ENUM(NSUInteger, SIXLSXChartType) {
 /**
  *  adds a new worksheet to this workbook. The worksheet name must be a valid Excel worksheet name, i.e. it must be less than 32 character and it cannot contain any of the characters:
  *
- *  / \ [ ] : * ?
+ *  `/ \ [ ] : * ?`
+ *
  *  In addition, you cannot use the same, case insensitive, sheetname for more than one worksheet.
  *
  *  @param worksheetTitle the title for the new worksheet or nil.

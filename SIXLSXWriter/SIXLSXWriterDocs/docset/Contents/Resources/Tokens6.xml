@@ -493,8 +493,8 @@
 			<Declaration>- (BOOL)setFooter:(NSString *)footerString</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>headerString</Name>
-					<Abstract type="html">The formar string for the print header.</Abstract>
+					<Name>footerString</Name>
+					<Abstract type="html">The formar string for the print footer.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">YES if successful, NO if not.</Abstract></ReturnValue>
@@ -502,7 +502,6 @@
             <NodeRef refid="6"/>
 		</Token>
 		
-        
         
         
 	</File>

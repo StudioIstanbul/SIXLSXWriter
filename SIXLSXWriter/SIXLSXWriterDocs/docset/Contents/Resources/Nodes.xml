@@ -24,15 +24,6 @@
 				
                 
                 
-				<Node>
-					<Name>Constants</Name>
-					<Path>index.html</Path>
-					<Subnodes>
-						<NodeRef refid="7"/>
-						
-					</Subnodes>
-				</Node>
-				
                 
 			</Subnodes>
         </Node>
@@ -194,12 +185,7 @@
 		
 		
         
-        <Node id="7" type="file" documentType="reference">
-            <Name>SIXLSXChartType</Name>
-            <Path>Constants/SIXLSXChartType.html</Path>
-            
-        </Node>
-		
+        
         
 	</Library>
 </DocSetNodes>

@@ -781,7 +781,7 @@
 				<h4 class="method-subtitle">See Also</h4>
 				<ul>
 					
-					<li><code><p>-(BOOL)writeFormula:(NSString <em>)formula toRow:(int)row andColumn:(int)column withFormat:(<a href="../Classes/SIXLSXFormat.html">SIXLSXFormat</a> </em>)cellFormat;</p></code></li>
+					<li><code><p><a href="#//api/name/writeFormula:toRow:andColumn:withFormat:">- writeFormula:toRow:andColumn:withFormat:</a></p></code></li>
 					
 				</ul>
 			</div>
@@ -879,6 +879,15 @@
 			
 
 			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/writeFormula:toCell:withFormat:">- writeFormula:toCell:withFormat:</a></p></code></li>
+					
+				</ul>
+			</div>
+			
 
 			
 			<div class="method-subsection declared-in-section">
@@ -966,6 +975,15 @@
 
 			
 
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/writeFormula:toCell:withFormat:">- writeFormula:toCell:withFormat:</a></p></code></li>
+					
+				</ul>
+			</div>
 			
 
 			
@@ -1763,69 +1781,65 @@ There is no way to specify &ldquo;AutoFit&rdquo; for a column in the Excel file 
 
 <p>Text in headers and footers can be justified (aligned) to the left, center and right by prefixing the text with the control characters &amp;L, &amp;C and &amp;R.</p>
 
-<p>For example (with ASCII art representation of the results):
-@&ldquo;&amp;LHello&rdquo;</p>
+<p>For example (with ASCII art representation of the results):</p>
 
-<pre><code> |                                                               |
- | Hello                                                         |
- |                                                               |
-</code></pre>
+<p><code>@"&amp;LHello"
+|                                                               |
+| Hello                                                         |
+|                                                               |</code></p>
 
-<p>@&ldquo;&amp;CHello&rdquo;
-     |                                                               |
-     |                          Hello                                |
-     |                                                               |</p>
+<p><code>@"&amp;CHello"
+|                                                               |
+|                          Hello                                |
+|                                                               |</code></p>
 
-<p>@&ldquo;&amp;RHello&rdquo;
-     |                                                               |
-     |                                                         Hello |
-     |                                                               |</p>
+<p><code>@"&amp;RHello"
+|                                                               |
+|                                                         Hello |
+|                                                               |</code></p>
 
 <p>For simple text, if you do not specify any justification the text will be centered. However, you must prefix the text with &amp;C if you specify a font name or any other formatting:</p>
 
-<p>@&ldquo;Hello&rdquo;
-     |                                                               |
-     |                          Hello                                |
-     |                                                               |</p>
+<p><code>@"Hello"
+|                                                               |
+|                          Hello                                |
+|                                                               |</code></p>
 
 <p>You can have text in each of the justification regions:</p>
 
-<p>@&ldquo;&amp;LCiao&amp;CBello&amp;RCielo&rdquo;
-     |                                                               |
-     | Ciao                     Bello                          Cielo |
-     |                                                               |</p>
+<p><code>@"&amp;LCiao&amp;CBello&amp;RCielo"
+|                                                               |
+| Ciao                     Bello                          Cielo |
+|                                                               |</code></p>
 
 <p>The information control characters act as variables that Excel will update as the workbook or worksheet changes. Times and dates are in the users default format:</p>
 
-<p>@&ldquo;&amp;CPage &amp;P of &amp;N&rdquo;
-     |                                                               |
-     |                        Page 1 of 6                            |
-     |                                                               |</p>
+<p><code>@"&amp;CPage &amp;P of &amp;N"
+|                                                               |
+|                        Page 1 of 6                            |
+|                                                               |</code></p>
 
-<p>@&ldquo;&amp;CUpdated at &amp;T&rdquo;
-     |                                                               |
-     |                    Updated at 12:30 PM                        |
-     |                                                               |</p>
+<p><code>@"&amp;CUpdated at &amp;T"
+|                                                               |
+|                    Updated at 12:30 PM                        |
+|                                                               |</code></p>
 
 <p>You can specify the font size of a section of the text by prefixing it with the control character &amp;n where n is the font size:</p>
 
-<pre><code> @"&amp;C&amp;30Hello Big"
- @"&amp;C&amp;10Hello Small"
-</code></pre>
+<p><code>@"&amp;C&amp;30Hello Big"
+@"&amp;C&amp;10Hello Small"</code></p>
 
 <p>You can specify the font of a section of the text by prefixing it with the control sequence &amp;&ldquo;font,style&rdquo; where fontname is a font name such as Windows font descriptions: &ldquo;Regular&rdquo;, &ldquo;Italic&rdquo;, &ldquo;Bold&rdquo; or &ldquo;Bold Italic&rdquo;: &ldquo;Courier New&rdquo; or &ldquo;Times New Roman&rdquo; and style is one of the standard</p>
 
-<pre><code> @"&amp;C&amp;\"Courier New,Italic\"Hello"
- @"&amp;C&amp;\"Courier New,Bold Italic\"Hello"
- @"&amp;C&amp;\"Times New Roman,Regular\"Hello"
-</code></pre>
+<p><code>@"&amp;C&amp;\"Courier New,Italic\"Hello"
+@"&amp;C&amp;\"Courier New,Bold Italic\"Hello"
+@"&amp;C&amp;\"Times New Roman,Regular\"Hello"</code></p>
 
 <p>It is possible to combine all of these features together to create sophisticated headers and footers. As an aid to setting up complicated headers and footers you can record a page set-up as a macro in Excel and look at the format strings that VBA produces. Remember however that VBA uses two double quotes &ldquo;&rdquo; to indicate a single double quote.</p>
 
 <p>To include a single literal ampersand &amp; in a header or footer you should use a double ampersand &amp;&amp;:</p>
 
-<pre><code> @"&amp;CCuriouser &amp;&amp; Curiouser - Attorneys at Law"
-</code></pre>
+<p><code>@"&amp;CCuriouser &amp;&amp; Curiouser - Attorneys at Law"</code></p>
 
 <p>Note, the header or footer string must be less than 255 characters. Strings longer than this will not be written.</p>
 			</div>
@@ -1879,8 +1893,8 @@ There is no way to specify &ldquo;AutoFit&rdquo; for a column in the Excel file 
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>headerString</code></th>
-						<td><p>The formar string for the print header.</p></td>
+						<th scope="row" class="argument-name"><code>footerString</code></th>
+						<td><p>The formar string for the print footer.</p></td>
 					</tr>
 				
 				</table>
@@ -2008,65 +2022,65 @@ There is no way to specify &ldquo;AutoFit&rdquo; for a column in the Excel file 
 
 <p>Text in headers and footers can be justified (aligned) to the left, center and right by prefixing the text with the control characters &amp;L, &amp;C and &amp;R.</p>
 
-<p>For example (with ASCII art representation of the results):
-@&ldquo;&amp;LHello&rdquo;</p>
+<p>For example (with ASCII art representation of the results):</p>
 
-<p>|                                                               |
+<p><code>@"&amp;LHello"
+|                                                               |
 | Hello                                                         |
-|                                                               |</p>
+|                                                               |</code></p>
 
-<p>@&ldquo;&amp;CHello&rdquo;
+<p><code>@"&amp;CHello"
 |                                                               |
 |                          Hello                                |
-|                                                               |</p>
+|                                                               |</code></p>
 
-<p>@&ldquo;&amp;RHello&rdquo;
+<p><code>@"&amp;RHello"
 |                                                               |
 |                                                         Hello |
-|                                                               |</p>
+|                                                               |</code></p>
 
 <p>For simple text, if you do not specify any justification the text will be centered. However, you must prefix the text with &amp;C if you specify a font name or any other formatting:</p>
 
-<p>@&ldquo;Hello&rdquo;
+<p><code>@"Hello"
 |                                                               |
 |                          Hello                                |
-|                                                               |</p>
+|                                                               |</code></p>
 
 <p>You can have text in each of the justification regions:</p>
 
-<p>@&ldquo;&amp;LCiao&amp;CBello&amp;RCielo&rdquo;
+<p><code>@"&amp;LCiao&amp;CBello&amp;RCielo"
 |                                                               |
 | Ciao                     Bello                          Cielo |
-|                                                               |</p>
+|                                                               |</code></p>
 
 <p>The information control characters act as variables that Excel will update as the workbook or worksheet changes. Times and dates are in the users default format:</p>
 
-<p>@&ldquo;&amp;CPage &amp;P of &amp;N&rdquo;
+<p><code>@"&amp;CPage &amp;P of &amp;N"
 |                                                               |
 |                        Page 1 of 6                            |
-|                                                               |</p>
+|                                                               |</code></p>
 
-<p>@&ldquo;&amp;CUpdated at &amp;T&rdquo;
+<p><code>@"&amp;CUpdated at &amp;T"
 |                                                               |
 |                    Updated at 12:30 PM                        |
-|                                                               |</p>
+|                                                               |</code></p>
 
 <p>You can specify the font size of a section of the text by prefixing it with the control character &amp;n where n is the font size:</p>
 
-<p>@&ldquo;&amp;C&amp;30Hello Big&rdquo;
-@&ldquo;&amp;C&amp;10Hello Small&rdquo;</p>
+<p><code>@"&amp;C&amp;30Hello Big"
+@"&amp;C&amp;10Hello Small"</code></p>
 
 <p>You can specify the font of a section of the text by prefixing it with the control sequence &amp;&ldquo;font,style&rdquo; where fontname is a font name such as Windows font descriptions: &ldquo;Regular&rdquo;, &ldquo;Italic&rdquo;, &ldquo;Bold&rdquo; or &ldquo;Bold Italic&rdquo;: &ldquo;Courier New&rdquo; or &ldquo;Times New Roman&rdquo; and style is one of the standard</p>
 
-<p>@&ldquo;&amp;C&amp;\"Courier New,Italic\"Hello&rdquo;
-@&ldquo;&amp;C&amp;\"Courier New,Bold Italic\"Hello&rdquo;
-@&ldquo;&amp;C&amp;\"Times New Roman,Regular\"Hello&rdquo;</p>
+<p><code>@"&amp;C&amp;\"Courier New,Italic\"Hello"
+@"&amp;C&amp;\"Courier New,Bold Italic\"Hello"
+@"&amp;C&amp;\"Times New Roman,Regular\"Hello"</code></p>
 
 <p>It is possible to combine all of these features together to create sophisticated headers and footers. As an aid to setting up complicated headers and footers you can record a page set-up as a macro in Excel and look at the format strings that VBA produces. Remember however that VBA uses two double quotes &ldquo;&rdquo; to indicate a single double quote.</p>
 
 <p>To include a single literal ampersand &amp; in a header or footer you should use a double ampersand &amp;&amp;:</p>
 
-<p>@&ldquo;&amp;CCuriouser &amp;&amp; Curiouser - Attorneys at Law&rdquo;</p>
+<p><code>@"&amp;CCuriouser &amp;&amp; Curiouser - Attorneys at Law"</code></p>
 
 <p>Note, the header or footer string must be less than 255 characters. Strings longer than this will not be written.</p>
 			</div>
