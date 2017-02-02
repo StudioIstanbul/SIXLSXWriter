@@ -16,7 +16,7 @@
 		A94231961D54EF7A002FF534 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A94231951D54EF7A002FF534 /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A96D862F1D5DC46700962394 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A96D862E1D5DC46700962394 /* libz.dylib */; };
 		A96D863F1D5DCD3600962394 /* libxlsxwriter.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A96D863E1D5DCD3600962394 /* libxlsxwriter.dylib */; };
-		A96D86411D5DCD4E00962394 /* libxlsxwriter.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = A96D863E1D5DCD3600962394 /* libxlsxwriter.dylib */; };
+		A96D86411D5DCD4E00962394 /* libxlsxwriter.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = A96D863E1D5DCD3600962394 /* libxlsxwriter.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 16;
+			dstSubfolderSpec = 6;
 			files = (
 				A96D86411D5DCD4E00962394 /* libxlsxwriter.dylib in CopyFiles */,
 			);
@@ -407,12 +407,12 @@
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				DYLIB_INSTALL_NAME_BASE = "@executable_path/../Frameworks";
 				FRAMEWORK_VERSION = A;
 				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/**";
 				INFOPLIST_FILE = SIXLSXWriter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -433,12 +433,12 @@
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				DYLIB_INSTALL_NAME_BASE = "@executable_path/../Frameworks";
 				FRAMEWORK_VERSION = A;
 				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/**";
 				INFOPLIST_FILE = SIXLSXWriter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
